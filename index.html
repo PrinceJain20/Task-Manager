@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div>
+        <p class="small-heading">MY DAY</p>
+        <h1>My Task Manager</h1>
+        <p class="intro">Add your tasks and keep track of what you have finished.</p>
+      </div>
+      <button id="theme-button" class="secondary-button" type="button">Dark mode</button>
+    </header>
+
+    <section class="stats" aria-label="Task counts">
+      <div class="stat-box">
+        <span>Total tasks</span>
+        <strong id="total-count">0</strong>
+      </div>
+      <div class="stat-box">
+        <span>To do</span>
+        <strong id="todo-count">0</strong>
+      </div>
+      <div class="stat-box">
+        <span>Completed</span>
+        <strong id="done-count">0</strong>
+      </div>
+    </section>
+
+    <section class="task-manager">
+      <h2>Add a task</h2>
+      <form id="task-form">
+        <label for="task-title">Task name</label>
+        <input id="task-title" type="text" placeholder="For example: Finish homework" maxlength="120" required>
+
+        <label for="task-category">Category</label>
+        <select id="task-category">
+          <option>Personal</option>
+          <option>Work</option>
+          <option>Study</option>
+          <option>Health</option>
+        </select>
+
+        <button class="primary-button" type="submit">Add task</button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="task-section">
+      <div class="task-heading">
+        <h2>My tasks</h2>
+        <p id="task-count">0 tasks</p>
+      </div>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <footer>Tasks are saved on this device.</footer>
+  </main>
+</body>
+</html>
